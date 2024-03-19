@@ -47,6 +47,12 @@ public class TodoServiceImpl implements TodoService{
         else
             return null;
     }
+
+	@Override
+	public List<Todo> getTodoByName(String name) {
+		// TODO Auto-generated method stub
+		return todoRepo.findByName(name);
+	}
 	
 
 }

@@ -63,7 +63,7 @@ public class TodoRepositoryTest {
         public void testSaveTodo() {
             
             Todo todoToSave = new Todo();
-            todoToSave.setName("Alice");
+            todoToSave.setName("Rajk");
             todoToSave.setTitle("aws");
             todoToSave.setDescription("cloud");
             todoToSave.setStatus("Pending");
@@ -75,7 +75,7 @@ public class TodoRepositoryTest {
             Todo savedTodo = todoRepo.save(todoToSave);
             
             
-            assertEquals("Alice", savedTodo.getName());
+            assertEquals("Rajk", savedTodo.getName());
             assertEquals("aws", savedTodo.getTitle());
             assertEquals("cloud", savedTodo.getDescription());
             assertEquals("Pending", savedTodo.getStatus());

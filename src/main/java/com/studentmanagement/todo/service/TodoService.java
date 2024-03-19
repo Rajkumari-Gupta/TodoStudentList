@@ -13,5 +13,6 @@ public interface TodoService {
 
 
    Todo updateTodo(Todo todo);
+   List<Todo> getTodoByName(String name);
 
 }

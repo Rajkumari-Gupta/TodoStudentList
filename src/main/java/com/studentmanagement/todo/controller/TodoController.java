@@ -41,5 +41,12 @@ public class TodoController {
 	public ResponseEntity<Todo> updateTodo(@RequestBody Todo todo) {
         return new ResponseEntity<>(todoService.updateTodo(todo),HttpStatus.OK);
     }
-
+	@GetMapping("/name/{studentname}")
+    public ResponseEntity<List<Todo>> getTodoByName(@PathVariable String studentname) {
+        List<Todo> todos = todoService.getTodoByName(studentname);
+        if (!todos.isEmpty()) {
+            return new ResponseEntity<>(todos, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
